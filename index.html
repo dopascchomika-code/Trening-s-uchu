@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101827">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Trening interwałów">
+<link rel="manifest" href="./manifest.webmanifest">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<title>Trening interwałów</title>
+<style>
+:root{color-scheme:dark;--bg:#101827;--panel:#1a2638;--panel2:#223149;--text:#f4f7fb;--muted:#aab8cc;--accent:#7cdbb2;--gold:#ffd166;--red:#ff8585}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at top,#20344b 0,#101827 55%);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;min-height:100vh;padding:env(safe-area-inset-top) 16px env(safe-area-inset-bottom)}
+main{max-width:620px;margin:0 auto;padding:22px 0 32px}.brand{display:flex;align-items:center;gap:12px;margin-bottom:20px}.logo{width:48px;height:48px;border-radius:15px;background:var(--accent);color:#10251f;display:grid;place-items:center;font-size:27px;font-weight:800}.eyebrow{font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--accent);font-weight:800}.brand h1{font-size:23px;line-height:1.1;margin:3px 0 0}.card{background:rgba(26,38,56,.96);border:1px solid #31425a;border-radius:22px;padding:18px;margin:14px 0;box-shadow:0 10px 35px #0002}.section-label{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.1em;font-weight:750;margin-bottom:10px}.seg{display:flex;gap:8px}.seg button{flex:1}.btn,button{font:inherit;cursor:pointer;border:0;border-radius:13px;padding:12px 14px;font-weight:750;background:var(--panel2);color:var(--text);touch-action:manipulation}.btn.primary{background:var(--accent);color:#10251f}.seg button.active{background:var(--accent);color:#10251f}.settings{display:grid;grid-template-columns:1fr 1fr;gap:12px}.check{display:flex;align-items:center;gap:9px;color:var(--muted);font-size:14px}.check input{width:18px;height:18px;accent-color:var(--accent)}.hero{text-align:center;padding:22px 12px 18px}.listen-icon{width:92px;height:92px;border-radius:28px;background:#253950;margin:0 auto 14px;display:grid;place-items:center;font-size:42px;border:1px solid #3a506a}.hero h2{font-size:24px;margin:8px 0}.hero p{color:var(--muted);margin:7px 0 16px}.playrow{display:flex;gap:9px;justify-content:center;flex-wrap:wrap}.playrow button{min-width:130px}.answers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.answer{min-height:54px;text-align:left;display:flex;align-items:center;justify-content:space-between;gap:8px;border:1px solid #354963}.answer small{color:var(--muted);font-weight:500}.answer:active{transform:scale(.985)}.answer.correct{background:#1f584a;border-color:var(--accent)}.answer.wrong{background:#5b3038;border-color:var(--red)}.feedback{border-radius:14px;padding:13px;margin-top:12px;line-height:1.4}.feedback.good{background:#1b493e;color:#caffeb}.feedback.bad{background:#4b2a34;color:#ffd8df}.feedback.hidden{display:none}.next{width:100%;margin-top:12px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.stat{background:#111c2b;border-radius:14px;padding:12px 8px;text-align:center}.stat strong{display:block;font-size:23px}.stat span{font-size:12px;color:var(--muted)}.foot{font-size:12px;color:var(--muted);text-align:center;line-height:1.5;margin:18px 8px}.pill{display:inline-block;background:#2c4058;color:#d9e5f5;padding:5px 9px;border-radius:99px;font-size:12px;font-weight:700}@media(min-width:520px){.answers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+</style>
+</head>
+<body>
+<main>
+  <header class="brand"><div class="logo">♪</div><div><div class="eyebrow">Codzienny trening</div><h1>Trening interwałów</h1></div></header>
+  <section class="card">
+    <div class="section-label">Sposób słuchania</div>
+    <div class="seg" role="group" aria-label="Sposób odtwarzania">
+      <button id="melodic" class="active" type="button">Po kolei</button>
+      <button id="harmonic" type="button">Jednocześnie</button>
+    </div>
+    <div style="height:16px"></div>
+    <div class="section-label">Zakres ćwiczeń</div>
+    <div class="settings">
+      <label class="check"><input type="checkbox" class="range" value="1" checked> Pryma czysta</label>
+      <label class="check"><input type="checkbox" class="range" value="2" checked> Sekunda mała</label>
+      <label class="check"><input type="checkbox" class="range" value="3" checked> Sekunda wielka</label>
+      <label class="check"><input type="checkbox" class="range" value="4" checked> Tercja mała</label>
+      <label class="check"><input type="checkbox" class="range" value="5" checked> Tercja wielka</label>
+      <label class="check"><input type="checkbox" class="range" value="6" checked> Kwarta czysta</label>
+      <label class="check"><input type="checkbox" class="range" value="7" checked> Tryton</label>
+      <label class="check"><input type="checkbox" class="range" value="8" checked> Kwinta czysta</label>
+      <label class="check"><input type="checkbox" class="range" value="9" checked> Seksta mała</label>
+      <label class="check"><input type="checkbox" class="range" value="10" checked> Seksta wielka</label>
+      <label class="check"><input type="checkbox" class="range" value="11" checked> Septyma mała</label>
+      <label class="check"><input type="checkbox" class="range" value="12" checked> Septyma wielka</label>
+      <label class="check"><input type="checkbox" class="range" value="13" checked> Oktawa</label>
+    </div>
+  </section>
+  <section class="card hero">
+    <span class="pill" id="roundLabel">Ćwiczenie 1</span>
+    <div style="height:13px"></div>
+    <div class="listen-icon" aria-hidden="true">♫</div>
+    <h2>Jaki to interwał?</h2>
+    <p>Posłuchaj uważnie, a potem wybierz odpowiedź.</p>
+    <div class="playrow">
+      <button class="btn primary" id="play">▶ Odtwórz dźwięki</button>
+      <button class="btn" id="replay">↻ Jeszcze raz</button>
+    </div>
+  </section>
+  <section class="card">
+    <div class="section-label">Wybierz interwał</div>
+    <div class="answers" id="answers"></div>
+    <div class="feedback hidden" id="feedback" role="status" aria-live="polite"></div>
+    <button class="btn primary next" id="next" hidden>Następne ćwiczenie →</button>
+  </section>
+  <section class="card">
+    <div class="section-label">Twoje wyniki</div>
+    <div class="stats">
+      <div class="stat"><strong id="score">0%</strong><span>Skuteczność</span></div>
+      <div class="stat"><strong id="correct">0</strong><span>Poprawne</span></div>
+      <div class="stat"><strong id="streak">0</strong><span>Seria</span></div>
+    </div>
+    <button id="reset" class="btn" style="width:100%;margin-top:12px">Wyzeruj wyniki</button>
+  </section>
+  <p class="foot">Dźwięki są generowane bezpośrednio w przeglądarce. Nie są pobierane z internetu ani wysyłane na serwer. Najlepiej ćwiczyć na słuchawkach.</p>
+</main>
+<script>
+const names={1:"Pryma czysta",2:"Sekunda mała",3:"Sekunda wielka",4:"Tercja mała",5:"Tercja wielka",6:"Kwarta czysta",7:"Tryton",8:"Kwinta czysta",9:"Seksta mała",10:"Seksta wielka",11:"Septyma mała",12:"Septyma wielka",13:"Oktawa"};
+const shortNames={1:"Pryma",2:"Sekunda mała",3:"Sekunda wielka",4:"Tercja mała",5:"Tercja wielka",6:"Kwarta",7:"Tryton",8:"Kwinta",9:"Seksta mała",10:"Seksta wielka",11:"Septyma mała",12:"Septyma wielka",13:"Oktawa"};
+let mode="melodic", current=null, answered=false, total=0, correct=0, streak=0, audioCtx=null;
+const $=id=>document.getElementById(id);
+function getCtx(){if(!audioCtx) audioCtx=new (window.AudioContext||window.webkitAudioContext)();if(audioCtx.state==="suspended")audioCtx.resume();return audioCtx}
+function tone(freq,start,duration,vol=.19){const c=getCtx(),o=c.createOscillator(),g=c.createGain();o.type="sine";o.frequency.value=freq;g.gain.setValueAtTime(.0001,start);g.gain.exponentialRampToValueAtTime(vol,start+.025);g.gain.setValueAtTime(vol,Math.max(start+.03,start+duration-.06));g.gain.exponentialRampToValueAtTime(.0001,start+duration);o.connect(g);g.connect(c.destination);o.start(start);o.stop(start+duration+.02)}
+function playPair(){if(!current)return;const c=getCtx(),t=c.currentTime+.08,f1=440*Math.pow(2,(current.root-69)/12),f2=440*Math.pow(2,(current.root+current.interval-69)/12);if(mode==="melodic"){tone(f1,t,.62);tone(f2,t+.76,.72)}else{tone(f1,t,1.15,.12);tone(f2,t,1.15,.12)}}
+function enabled(){return [...document.querySelectorAll(".range:checked")].map(x=>+x.value)}
+function newQuestion(){let choices=enabled();if(!choices.length){document.querySelector('.range[value="4"]').checked=true;choices=enabled()}let iv=choices[Math.floor(Math.random()*choices.length)];let root=48+Math.floor(Math.random()*25);current={interval:iv,root};answered=false;$("feedback").className="feedback hidden";$("next").hidden=true;$("roundLabel").textContent="Ćwiczenie "+(total+1);renderAnswers();playPair()}
+function renderAnswers(){const choices=enabled().sort((a,b)=>a-b);$("answers").innerHTML="";choices.forEach(n=>{const b=document.createElement("button");b.type="button";b.className="answer";b.innerHTML='<span>'+names[n]+'</span><small>'+n+' półton'+(n===1?'':'ów')+'</small>';b.addEventListener("click",()=>answer(n,b));$("answers").appendChild(b)})}
+function answer(n,btn){if(answered)return;answered=true;total++;const good=n===current.interval;if(good){correct++;streak++;btn.classList.add("correct")}else{streak=0;btn.classList.add("wrong");[...$("answers").children].forEach((b,i)=>{if(+enabled().sort((a,b)=>a-b)[i]===current.interval)b.classList.add("correct")})}const fb=$("feedback");fb.className="feedback "+(good?"good":"bad");fb.innerHTML=good?"<strong>Świetnie! Dobra odpowiedź.</strong><br>To: "+names[current.interval]+".":"<strong>Jeszcze nie.</strong><br>Prawidłowa odpowiedź: "+names[current.interval]+". Posłuchaj ponownie i spróbuj zapamiętać brzmienie."; $("next").hidden=false;updateStats()}
+function updateStats(){$("score").textContent=total?Math.round(correct/total*100)+"%":"0%";$("correct").textContent=correct;$("streak").textContent=streak}
+$("play").addEventListener("click",playPair);$("replay").addEventListener("click",playPair);$("next").addEventListener("click",newQuestion);
+$("melodic").addEventListener("click",()=>{mode="melodic";$("melodic").classList.add("active");$("harmonic").classList.remove("active");playPair()});
+$("harmonic").addEventListener("click",()=>{mode="harmonic";$("harmonic").classList.add("active");$("melodic").classList.remove("active");playPair()});
+document.querySelectorAll(".range").forEach(x=>x.addEventListener("change",()=>{renderAnswers();newQuestion()}));
+$("reset").addEventListener("click",()=>{total=correct=streak=0;updateStats();newQuestion()});
+newQuestion();
+if("serviceWorker" in navigator && location.protocol!=="file:"){window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js").catch(()=>{}))}
+</script>
+</body></html>
